@@ -11,12 +11,14 @@
 </template>
 
 <script lang="ts">
-import { customRef, defineComponent, ref } from 'vue'
+import { customRef, defineComponent } from 'vue'
 
 // 自定义hook防抖的函数
 // value传入的数据,将来数据的类型不确定,所以,用泛型,delay防抖的间隔时间.默认是200毫秒
 function useDebouncedRef<T>(value: T, delay = 200) {
   // 准备一个存储定时器的id的变量
+
+  // eslint-disable-next-line no-undef
   let timeOutId: NodeJS.Timeout
   return customRef((track, trigger) => {
     return {

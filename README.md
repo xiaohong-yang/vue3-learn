@@ -1,4 +1,5 @@
 # vue3-vuecli-demo
+仅供学习使用
 
 ## Project setup
 ```
